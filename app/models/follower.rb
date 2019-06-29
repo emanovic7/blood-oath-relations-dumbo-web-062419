@@ -15,7 +15,7 @@ class Follower
   def cults
     ff_oaths = []
     BloodOath.all.each do |oath|
-      if self == oath.follower
+      if oath.follower == self
         ff_oaths << oath.cult
       end
     end
@@ -24,7 +24,7 @@ class Follower
 
 
   def join_cult(cult)
-    @cults << cult
+    cult.recruit_follower(self)
   end
 
   def self.all
@@ -33,7 +33,7 @@ class Follower
 
   def self.of_a_certain_age(age)
     @@all.select do |follower|
-
+      follower.age >= age
     end
   end
 
