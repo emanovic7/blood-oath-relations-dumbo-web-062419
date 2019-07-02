@@ -30,6 +30,8 @@ bloodoath1 = BloodOath.new("A Lannister always pays her debts", follower3, cult2
 bloodoath2 = BloodOath.new("Best Pizza Ever", follower4, cult3)
 bloodoath3 = BloodOath.new("master the code!", follower1, cult1)
 bloodoath4 = BloodOath.new("EAT THE CHEESE!", follower2, cult3)
+bloodoath5 = BloodOath.new("quakerOats!", follower3, cult1)
+bloodoath6 = BloodOath.new("Say oats", follower1, cult2)
 
 
 

@@ -37,4 +37,30 @@ class Follower
     end
   end
 
+  def my_cults_slogans
+    self.cults.each_with_index do |cult, i|
+      puts "#{i+1}. #{cult.slogan}."
+    end
+    return nil
+  end
+
+  def self.most_active
+    cult_count = 0
+    member = nil
+
+    @@all.each do |follower|
+      if follower.cults.length > cult_count
+        cult_count = follower.cults.length
+        member = follower
+      end
+    end
+    member
+  end
+
+
+
 end
+
+
+# Follower.top_ten
+# returns an Array of followers; they are the ten most active followers

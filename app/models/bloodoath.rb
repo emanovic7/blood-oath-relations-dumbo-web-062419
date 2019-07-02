@@ -11,6 +11,7 @@ class BloodOath
     @cult = cult
     @date = Time.now.strftime("%d/%m/%Y")
     @@bloodoaths << self
+    @cult.followers << follower
   end
 
   def initiation_date
